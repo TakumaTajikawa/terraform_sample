@@ -1,0 +1,3 @@
+ecr/.terraform/plugins/
+vpc/.terraform/plugins/
+iam/.terraform/plugins/
