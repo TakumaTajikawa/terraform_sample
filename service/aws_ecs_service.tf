@@ -13,4 +13,10 @@ resource "aws_ecs_service" "webapp-service" {
 
     # サービスを実行するタイプを EC2 か FARGATE を指定
     launch_type = "EC2"
+
+    load_balancer {
+        target_group_arn = aws_lb_target_group.http.arn
+        container_name = "sample-webapp"
+        container_port = "4567"
+    }
 }
